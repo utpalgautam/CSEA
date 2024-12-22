@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <audio id="background-music" src="sounds/background.mp3" loop></audio>
+  <audio id="flip-sound" src="sounds/flip.mp3"></audio>
+  <audio id="match-sound" src="sounds/match.mp3"></audio>
+
+  <div class="game-container single-player">
+    <header>
+      <h1>Memory Card Game</h1>
+      <div class="controls">
+        <label for="theme-selector">Theme:</label>
+        <select id="theme-selector">
+          <option value="animals" selected>Animals</option>
+          <option value="numbers">Numbers</option>
+          <option value="symbols">Symbols</option>
+        </select>
+
+        <label for="difficulty-selector">Difficulty:</label>
+        <select id="difficulty-selector">
+          <option value="easy" selected>Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <label for="mode-selector">Mode:</label>
+        <select id="mode-selector">
+          <option value="practice" selected>Practice</option>
+          <option value="timeTrial">Time Trial</option>
+        </select>
+
+        <label for="player-mode-selector">Player Mode:</label>
+        <select id="player-mode-selector">
+          <option value="single" selected>Single Player</option>
+          <option value="multiplayer">Multiplayer</option>
+        </select>
+
+        <label for="custom-images-input">Custom Images:</label>
+        <input type="file" id="custom-images-input" accept="image/*" multiple>
+
+        <button id="reset-button">Reset Game</button>
+      </div>
+    </header>
+    <main>
+      <div id="game-board" class="game-board"></div>
+      <div class="stats">
+        <p>Score: <span id="score">0</span></p>
+        <p>Moves: <span id="moves">0</span></p>
+        <p>Time: <span id="timer">0:00</span></p>
+        <div class="multiplayer-stats">
+          <p>Current Player: <span id="current-player">Player 1</span></p>
+          <p>Player 1 Score: <span id="player1-score">0</span></p>
+          <p>Player 2 Score: <span id="player2-score">0</span></p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
